@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> 봉사목록페이지 </title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">         </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#loginbtn").click(function(){
+                var id = $("input[name=id]").val();
+                var pw = $("input[name=password]").val();
+                if(id=="hsj" && pw=="0000"){
+                    alert(id+"님 로그인하셨습니다");
+                    location.href="volunteerlist.html";
+                }
+            });   
+        });
+    </script>
+    <style type="text/css">
+        body{
+            margin:0;
+        }
+        .headfoot{
+            height: 80px;
+        }
+        #header{
+        }
+        #footer{
+            background-color: antiquewhite;
+        }
+        #contents{
+            background-color:beige;
+            min-height: calc(100vh - 130px);
+        }
+        #header #logo{
+            height: 100%; 
+            width: auto;
+            
+        }
+        #header #right{
+            width: 30vw;
+            height: 100%;
+            float: right;
+        }
+        nav .common{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            background-color:darkorange;
+            font-weight: bold;
+            list-style-type: none;  /*나타나는 점 없애기*/
+            
+        }
+        nav .menu{
+            padding: 10px;
+            cursor: pointer;
+        }
+        nav .menu a{
+            text-decoration: none; /*밑줄 없애기*/
+            color: white;
+            vertical-align: middle;
+            line-height: 30px;
+            text-align: center;
+        }
+        nav .menu a:hover{
+            color:darkred;
+        }
+        .btn1{
+            width: ;
+            height: 30%;
+            float: right;
+            margin-top: 50px;
+            margin-right: 10%;
+        }
+        #contents #volunteerlist{
+            width: 100%;
+            height: 800px;
+            max-height: 100%;
+            background-color:darkgrey;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="headfoot" id="header">
+            <a href="index.html"><img src="VCS%EB%A1%9C%EA%B3%A02.png" id="logo"></a>
+            <div id="right">
+                <button class="btn1" id="join">회원가입</button>
+                <button class="btn1" id="login">로그인</button>
+            </div>
+    </div>
+    <nav>
+        <ul class="common">
+            <li class="menu"><a href="#">Menu</a></li>
+            <li class="menu"><a href="#">봉사안내</a></li>
+            <li class="menu"><a href="#">봉사조회</a></li>
+            <li class="menu"><a href="#">봉사신청</a></li>
+            <li class="menu"><a href="#">봉사인증</a></li>
+        </ul>
+    </nav>
+
+    <div id="contents">
+        <div id="volunteerlist">봉사목록페이지입니다</div>
+    </div>
+    <div class="headfoot" id="footer">
+        본 페이지에 게시된 이메일주소가 자동 수집되는것을 거부하며,
+        <br> 이를 위반시 정보통신망법에 의해 처벌됨을 유념하시기 바랍니다.
+        <br>ⓒ goodee Academy .All Rights reserved.
+    </div>
+</body>
+</html>
